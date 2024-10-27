@@ -22,25 +22,6 @@ namespace myImages {
 . . . . . e e e e e e . . . . . 
 . . . . . e e . . e e . . . . . 
 `;
-            case "image2":
-            case "myImage0":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . f f f f f f . . . . . 
-. . . . f 1 1 1 1 1 5 f . . . . 
-. . . f 1 5 5 5 5 5 1 5 f . . . 
-. . . f 5 5 f f f f 5 1 f . . . 
-. . . f 5 f d d d d f 5 f . . . 
-. . f 5 f d 2 d d 2 d f 5 f . . 
-. . f 5 f d d d d d d f 5 f . . 
-. . f 5 5 f d d d d f 5 5 f . . 
-. f 5 5 f 3 f f f f 3 f 5 5 f . 
-. . f f d 3 5 3 3 5 3 d f f . . 
-. . f d d f 3 5 5 3 f d d f . . 
-. . . f f 3 3 3 3 3 3 f f . . . 
-. . . f 3 3 5 3 3 5 3 3 f . . . 
-. . . f f f f f f f f f f . . . 
-. . . . . f f . . f f . . . . . 
-`;
             case "image1":
             case "myImage":return img`
 . . . . f f f f . . . . . . . . 
@@ -97,6 +78,25 @@ f 6 7 d d d d d d 7 2 f . . . .
 7 7 f 2 2 6 6 6 6 2 2 7 . . . . 
 . . . f 2 f f f f . . . . . . . 
 . . . f f . . f f . . . . . . . 
+`;
+            case "image2":
+            case "myImage0":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . f f f f f f . . . . . 
+. . . . f 1 1 1 1 1 5 f . . . . 
+. . . f 1 5 5 5 5 5 1 5 f . . . 
+. . . f 5 5 f f f f 5 1 f . . . 
+. . . f 5 f d d d d f 5 f . . . 
+. . f 5 f d 2 d d 2 d f 5 f . . 
+. . f 5 f d d d d d d f 5 f . . 
+. . f 5 5 f d d d d f 5 5 f . . 
+. f 5 5 f 3 f f f f 3 f 5 5 f . 
+. . f f d 3 5 3 3 5 3 d f f . . 
+. . f d d f 3 5 5 3 f d d f . . 
+. . . f f 3 3 3 3 3 3 f f . . . 
+. . . f 3 3 5 3 3 5 3 3 f . . . 
+. . . f f f f f f f f f f . . . 
+. . . . . f f . . f f . . . . . 
 `;
         }
         return null;

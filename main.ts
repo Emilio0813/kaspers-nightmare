@@ -3,6 +3,11 @@ namespace SpriteKind {
     export const Enemy3 = SpriteKind.create()
     export const Enemy4 = SpriteKind.create()
 }
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy4, function (sprite, otherSprite) {
+    sprites.destroy(otherSprite, effects.hearts, 100)
+    pause(1000)
+    game.gameOver(true)
+})
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     Skud_retning = 3
 })
@@ -111,14 +116,18 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Skud_retning = 1
 })
 info.onScore(30, function () {
-    tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLarge)
-})
-info.onScore(100, function () {
     sprites.destroyAllSpritesOfKind(SpriteKind.Enemy3)
-    Enemy_Sprite_4 = sprites.create(assets.image`myImage2`, SpriteKind.Enemy4)
+    Enemy_Sprite_4 = sprites.create(assets.image`myImage0`, SpriteKind.Enemy4)
     tiles.placeOnRandomTile(Enemy_Sprite_4, sprites.castle.rock1)
-    scaling.scaleByPercent(Enemy_Sprite_4, 300, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-    mySprite.setPosition(0, 0)
+    Enemy_Sprite_4.follow(mySprite, 80)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy4, function (sprite, otherSprite) {
+    info.changeLifeBy(-1)
+    mySprite.setPosition(25, 25)
+    tiles.placeOnRandomTile(Enemy_Sprite_4, sprites.dungeon.floorMixed)
+})
+info.onScore(10, function () {
+    tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLarge)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     Skud_retning = 2
@@ -139,7 +148,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy2, function (sprite, otherS
     info.changeLifeBy(-1)
     mySprite.setPosition(25, 25)
 })
-info.onScore(70, function () {
+info.onScore(20, function () {
     tiles.placeOnRandomTile(mySprite, sprites.castle.tilePath5)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairLarge, function (sprite, location) {
@@ -172,22 +181,29 @@ info.setLife(3)
 info.setScore(0)
 Current_level = 1
 Change_level(1)
-game.onUpdateInterval(500, function () {
-    Enemy_sprite = sprites.create(assets.image`myImage`, SpriteKind.Enemy)
-    tiles.placeOnRandomTile(Enemy_sprite, sprites.dungeon.collectibleInsignia)
-    Enemy_sprite.follow(mySprite, 30)
-    if (Current_level == 2) {
-        sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
-        Enemy_sprite2 = sprites.create(assets.image`myImage3`, SpriteKind.Enemy2)
-        tiles.placeOnRandomTile(Enemy_sprite2, sprites.dungeon.collectibleBlueCrystal)
-        Enemy_sprite2.follow(mySprite, 30)
-    } else if (Current_level == 3) {
-        sprites.destroyAllSpritesOfKind(SpriteKind.Enemy2)
-        sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
-        Enemy_Sprite_3 = sprites.create(assets.image`myImage2`, SpriteKind.Enemy3)
-        tiles.placeOnRandomTile(Enemy_Sprite_3, sprites.dungeon.stairLadder)
-        Enemy_Sprite_3.follow(mySprite, 30)
+game.onUpdateInterval(2000, function () {
+    if (info.score() <= 20) {
+        Enemy_sprite = sprites.create(assets.image`myImage`, SpriteKind.Enemy)
+        tiles.placeOnRandomTile(Enemy_sprite, sprites.dungeon.collectibleInsignia)
+        Enemy_sprite.follow(mySprite, 20)
+        if (Current_level == 2) {
+            sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
+            Enemy_sprite2 = sprites.create(assets.image`myImage3`, SpriteKind.Enemy2)
+            tiles.placeOnRandomTile(Enemy_sprite2, sprites.dungeon.collectibleBlueCrystal)
+            Enemy_sprite2.follow(mySprite, 35)
+        } else if (Current_level == 3) {
+            sprites.destroyAllSpritesOfKind(SpriteKind.Enemy2)
+            sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
+            Enemy_Sprite_3 = sprites.create(assets.image`myImage2`, SpriteKind.Enemy3)
+            tiles.placeOnRandomTile(Enemy_Sprite_3, sprites.dungeon.stairLadder)
+            Enemy_Sprite_3.follow(mySprite, 50)
+        }
     } else {
-    	
+        sprites.destroyAllSpritesOfKind(SpriteKind.Enemy3)
+    }
+})
+game.onUpdateInterval(500, function () {
+    if (info.score() == 30) {
+        sprites.destroyAllSpritesOfKind(SpriteKind.Enemy3)
     }
 })
