@@ -182,7 +182,7 @@ info.setScore(0)
 Current_level = 1
 Change_level(1)
 game.onUpdateInterval(2000, function () {
-    if (info.score() <= 20) {
+    if (info.score() <= 30) {
         Enemy_sprite = sprites.create(assets.image`myImage`, SpriteKind.Enemy)
         tiles.placeOnRandomTile(Enemy_sprite, sprites.dungeon.collectibleInsignia)
         Enemy_sprite.follow(mySprite, 20)
