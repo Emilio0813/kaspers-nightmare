@@ -60,25 +60,6 @@ f 6 7 d d d d d d 7 2 f . . . .
 . . . f 2 f f f f . . . . . . . 
 . . . f f . . f f . . . . . . . 
 `;
-            case "image5":
-            case "myImage3":return img`
-. . . . f f f f . . . . . . . . 
-. . f f 6 6 6 6 f f . . . . . . 
-. f f 6 6 6 6 6 2 2 f . . . . . 
-f f f f 7 6 6 6 2 2 2 f . . . . 
-f f f 2 7 7 6 6 f f 2 f . . . . 
-f 2 2 2 7 7 7 6 6 f f f . . . . 
-f 7 6 7 7 7 7 7 7 6 7 f . . . . 
-f 7 7 f f 7 7 f f 7 7 f . . . . 
-f 6 7 d d d d d d 7 6 f . . . . 
-. f 6 d 2 2 b d d e f . . . . . 
-. f f 6 2 7 7 7 6 f f . . . . . 
-6 7 f b 1 1 1 1 b f 7 6 . . . . 
-7 d f 1 1 1 1 1 1 f d 7 . . . . 
-7 7 f 6 6 6 6 6 6 f 7 7 . . . . 
-. . . f f f f f f . . . . . . . 
-. . . f f . . f f . . . . . . . 
-`;
             case "image1":
             case "myImage":return img`
 . . . . f f f f . . . . . . . . 
@@ -92,6 +73,25 @@ f 7 7 f f 7 7 f f 7 7 f . . . .
 f 6 7 d d d d d d 7 6 f . . . . 
 . f 6 d d b b d d 6 f . . . . . 
 . f f 6 7 7 7 7 6 f f . . . . . 
+6 7 f b 1 1 1 1 b f 7 6 . . . . 
+7 d f 1 1 1 1 1 1 f d 7 . . . . 
+7 7 f 6 6 6 6 6 6 f 7 7 . . . . 
+. . . f f f f f f . . . . . . . 
+. . . f f . . f f . . . . . . . 
+`;
+            case "image5":
+            case "myImage3":return img`
+. . . . f f f f . . . . . . . . 
+. . f f 6 6 6 6 f f . . . . . . 
+. f f 6 6 6 6 6 2 2 f . . . . . 
+f f f f 7 6 6 6 2 2 2 f . . . . 
+f f f 2 7 7 6 6 f f 2 f . . . . 
+f 2 2 2 7 7 7 6 6 f f f . . . . 
+f 7 6 7 7 7 7 7 7 6 7 f . . . . 
+f 7 7 f f 7 7 f f 7 7 f . . . . 
+f 6 7 d d d d d d 7 6 f . . . . 
+. f 6 d 2 2 b d d e f . . . . . 
+. f f 6 2 7 7 7 6 f f . . . . . 
 6 7 f b 1 1 1 1 b f 7 6 . . . . 
 7 d f 1 1 1 1 1 1 f d 7 . . . . 
 7 7 f 6 6 6 6 6 6 f 7 7 . . . . 

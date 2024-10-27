@@ -14,15 +14,15 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage2"
     },
-    "image5": {
-        "data": "hwQQABAAAAAA8P//D2B3AAD/L3f2f30A8P8vdmf//wDw9iL33bZh/292d/ctEmH/b2Z3dy0XYQ9vZnZ3vRdhD29mZvfdF2H/8CJv9922Yf/wIv925///AAAv8nf2f30AAPD//w9gdwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "myImage3"
-    },
     "image1": {
         "data": "hwQQABAAAAAA8P//D2B3AAD//3f2f30A8P//dmf//wDw9nf33bZh/292d/fdF2H/b2Z3d70XYQ9vZnZ3vRdhD29mZvfdF2H/8PZv9922Yf/w//92Z///AAD//3f2f30AAPD//w9gdwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage"
+    },
+    "image5": {
+        "data": "hwQQABAAAAAA8P//D2B3AAD/L3f2f30A8P8vdmf//wDw9iL33bZh/292d/ctEmH/b2Z3dy0XYQ9vZnZ3vRdhD29mZvfdF2H/8CJv9922Yf/wIv925///AAAv8nf2f30AAPD//w9gdwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage3"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
